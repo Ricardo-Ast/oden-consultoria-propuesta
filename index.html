@@ -88,12 +88,25 @@
   .proof-box{display:flex; gap:14px; align-items:flex-start;}
   .proof-box img{width:34px; height:34px; border-radius:8px; object-fit:contain; flex:none; margin-top:1px;}
   .proof-box .proof-txt{flex:1; min-width:0;}
+
+  body{overflow:hidden; height:100vh;}
+  .deck{position:relative; width:100vw; height:100vh;}
+  .slide{position:absolute; inset:0; display:flex; flex-direction:column; opacity:0; pointer-events:none; transition:opacity .22s ease; padding:56px 70px 60px; overflow-y:auto;}
+  .slide.active{opacity:1; pointer-events:auto;}
+  .slide-inner{max-width:760px; margin:0 auto; width:100%;}
+  .slide h2{margin-top:0;}
+  .nav{position:fixed; bottom:22px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:14px; background:rgba(21,24,26,0.88); backdrop-filter:blur(6px); border-radius:999px; padding:9px 18px; z-index:50;}
+  .nav button{background:none; border:none; color:#fff; cursor:pointer; font-size:15px; padding:4px 8px; opacity:.85;}
+  .nav button:hover{opacity:1;}
+  .nav .cnt{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:rgba(255,255,255,0.8); min-width:40px; text-align:center;}
+  @media (max-width:900px){ .slide{padding:34px 24px;} }
 </style>
 </head>
 <body>
-<div class="doc">
-
-  <div class="brandrow">
+<div class="deck">
+  <section class="slide active">
+    <div class="slide-inner">
+<div class="brandrow">
     <span class="brand"><span class="sq"></span>oden.food</span>
     <span class="x">×</span>
     <span class="brand" style="color:var(--navy)">Ricardo Astorga</span>
@@ -108,8 +121,12 @@
     <div><b>De</b>Ricardo Astorga</div>
     <div><b>Fecha</b>13 de noviembre, 2026</div>
   </div>
+    </div>
+  </section>
 
-  <h2>1 · El diagnóstico</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>1 · El diagnóstico</h2>
   <p>Todo el crecimiento de Oden hoy viene de restaurantes que se dan de alta solos, sin ningún vendedor de por medio. Funciona — así se llega a los primeros cientos de clientes. Pero ahí se queda: no hay today ninguna cuenta de cadena o grupo de restaurantes cerrada a través de un proceso comercial dedicado.</p>
   <div class="stat-grid">
     <div class="stat-card"><div class="n">140+</div><div class="l">restaurantes activos en Oden Food</div></div>
@@ -117,8 +134,12 @@
     <div class="stat-card"><div class="n">0</div><div class="l">cadenas cerradas vía proceso comercial</div></div>
     <div class="stat-card"><div class="n">5</div><div class="l">países donde ya opera Oden</div></div>
   </div>
+    </div>
+  </section>
 
-  <h2>2 · Por qué yo</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>2 · Por qué yo</h2>
   <p>15+ años liderando ventas B2B en LATAM, construyendo procesos comerciales desde cero en cada empresa donde he estado — no solo ejecutando, diseñando el sistema completo.</p>
   <div class="logo-wall">
     <div class="logo-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAh3klEQVR4nO2dZ3Ncx5WGz42TkAkwi0mSZUu00nptbfqyf2j/4VbZ5XW2KVlZFEkwAUQGBhNv3HpOd89cDEFRogACqmKrRoNJffv2Se9JTU/+51Ypr8aJDf/kLv1qvCLAKRivCHDC4xUBTni8IsAJj1BO8fBe8HflEc71vHl/7PynmgDlKZ3rKOc/dQTwnvrjB+6Cd8iOVN87IlE4MP2PmPNUEcCzN+Pxn70pnkt7t/rexCby2eg73vjvUv9zc3rPnac63EcHvm9f85bOXfnM18fBydy6flIEKEc3PcFiP3ri41NATJ3zeMEFnyoCiKMAz8WI3Sw7Pue3VTUDtoMt3e+Yq3iGenremJQWZXfzrB8Vdn6o8JMnwOQNl3YTPXtzhxGj+prNGW10Rf51DksYJ2G88TzJcFOMdNb4NZfSmQ6oGbte993yp0YAz+jrIPQkDjyph75EgbnZqnAcplrVdnie5EUpw6yQflrq36HvST0ycwW+J2VZjoTreSq6qvuzopQ0LyXJzTNzM8LAk1otkDj09FqOMN93nBgBRjxVjm80sJs12wjl/HQol2YjmW8GIwPHRhRlqa/d79lQNt5NxOcPd1O5t5XI/iCXmXog18/EcmUuFt+3RJyYZ3JgZPUTb2xwe0kpO71MVvczWdlLZaeb6XeZ/8aZmlxZiKQV+yMgwW9G8x+GwsoTJIBDOqVjaW7Ybv5SK5JrZ2K5eb4u711qyGvz0YE153mphGIOVe2FeW0mNvf31wc9+X3QlZV2KhdnIvnP16fk11ca42uKSFo49HJwbYZApfiVD3hvt5/Lg91UPl0dSFn29DXfOzsdykfXmvIfN1qy0AwM+hEjMUiEEuM7pO3kJKBiIEv+8zxpRL5cnI3knfN1+ehaS359tSlvLMYHfof4s+Gq7rF9Ralqqjr4fLuXSzP25dpCLB9dbcp/vzn1zHmqw0nHiKh2bHVzubM11Gut7adyfydRVXemFcjNC3Wd/+xUeGD+U0sAtYce0A2WVjbWNxDhK/Ox3hAPNm9yVDdbOXhi8xn87mdLNalHvrw2F8nV58xzYG2eSHAIgGejfb8mO/1cvliL5cu1gbT7ItP1QKWguvmT83un1QbogI2zUqQuMtdEn8byi3N1uTIfSfiCocKp2Fe9P1XzZXEq1NdHMWbrgVydj3WNPG/Gmcw3ApXcFx2nAwV5noShL2daoep8Nn+uEYw+Rt+2B7nsDwsZZhhdo2b0pyK6ARhrNoO34T4MOAYSNVTVJqgs5uHRS8188ICxS+ZzXjPHdM3XOVgLDM086PnrCzBJTdb2A71OPZxQV71c18zc2AKE3En9JIo+GQJYJOKxmsCTKPRlrhmqKIN+IIQb7UEhd7cSub0xkOXtVNJhLiW6O/DUPYD3mo1AVQ6249x0qKqMuWbqpcJEIK3bjM4wlyf7mTzazeTxXiKb3VzKrNA5FVWxWxAg9uXyXCSvL8ZyfaGmBGajkSq4/72LDf0t30E9MXd3WKiKuredKBLb7ubSTXPJc0sA36g351++dAIAF0EOztB56MpaILPc1EIsr83FqjKa0Zij9oe53N0cyu/vduXWo74UvVxKOC7yxcsL8QqR5lQo/369JTOonJZRCXN+IGk8Rjo80lykmxTypJ3JF08G8vHjnhJXhrkUgS8l1MwK8QuRoBHI2+frkuQtJWgrxpeACIYwWdGQTlLIUiuUCzORQk7mZj7W+eXaUB7tJbLXzyVHarmZQNQwj0MuL5EALmilDIZY4rEGnsR1X5bmjdFEt6q4V3QG3Pr1xlD+9rAvf1ruioC/0bnodbBkXkpjJlKDyxxvLNWUANzopA2B6DhoIKTl7UQ+edyXz58MRAY5OyMCYZkTm9QIpJcUuh6kcqEZqjpjXlV1Z2rK9diFmbq5EAS4s5nIx4/7OjdICdU5ClMEnt4b6zg5AvBCo1elbmKz5svl+Vi57a2ztZHu7wwL1aPfbg6VAIi1tFORfj4mQGII0BeRezuJ3NlO5Be7qepvDO8k0kG3s7+DrNSN2exkIvuZSoDUgvGcSa5fvN8I5NutRK4tJHJuOlKbwPogdhiYuAbqzY32sJD724l8tT6QO+tD6XXSgzEi35Pcq8SmpHyJBJAK5q4Er+YaxlOFAHDwDBshIjv9TL5eG8rnqwO5s5XI3rAwXNryzGahptgs3vc9Jdbd7US+Xh/o11Bn6O3qwN9wcTpUhkoaXO8FInB4PZA0zSXtm5gSHP14N5W7m4mqGdQN6+VnsU493nwkGk8Z5+/Rbiq9fmY+biLRvuSqd93m20d5gkZYH4EnC41Ars5Fqn7wWt3Y6eXy1fpQdfXKTiIprAvSaaISIlUH6NfVdqobNRjk8mBzKJ9NGSMMepkkAINNh2troadzoGp4DwcQ4z9IC3W0uD48srGfqfRdWYjljUXkd7zG6sAeYJTXO5nsoXYg0hSgApTkK+LSdaaFxpM0llS+RAkwhtfCMNAAG1D3lasuzoRyfqbiRRZGTxPPQQVt7SSSDwtptEK5vliTdy80FA7CbRi8b9YH0m9n8igcyOd1o7Ovn6kduoZxAsU8IEQjDuT8TKRcPsgKXSSebKdfyM5+Ksvbgbyxl6racl6tjcWNgnNs/Go7k/Vuph5yLfJ0TpzCyPdlo5dJsZ+p3WAUNjIbvoxwgwuajfB25Esz8hVD8wA6ztXH3Lo/gAsNTATOddDTpUhtzpPXz8Tyb9eaulm3N4d641+vDWTQTmWN8EIjlDcXa7Lby1Xiq3bYGT6e2Gc2j2dUFjbjTDOQrPSlnxYabOt0c9nvZvJ4N5GV3USZAjjrcD//H/LdfqHMgtHd6Obq2LfqgVyei5UAvEYCnpSlDNNSiqLQ0Au/P3YJGKUIHfLxPanFvsxPo3Zqqv8XW+EBY8amPtpLFQFp0AtUEvmKRN5YrMn7lxpKOLgXtBGHviRpKe1OJl47lcftVDkRQw40dWPkCNkYkjpJhbELXB+Mjzrqo046oa6j6Blsz98b3UyloD4VjuwZBp3PkNTlrUTaNko6h7QuxPL6Yk3R1Fon02slUFxDpWY9xysBLkeiYUwrCqFIsxbIxblY3joL8qmPHC8WyqbBTSCaVTYAXB56MjsValwHjuIZ3QpHOoi4HvkaGSUETcj44V6q9iHAU42MN1yN1x+WK4EIxHaKIlI9vtXNZCctJM1K5WwIi2RiX5wUoG54zxBgKH2QlUdYBTVo4PV2L5M7m0NzEQUfGqtW5jx2CTCx/FI8a/nLENc+VFXyzvm6/PxcTfU5g83HkcHwfrOR6I2p6mmFch4juFRTQ43xZNpa4Kn0ELrY3wmli9opRJ5YjvxmPdZNxStuhEBHr5JbsDF/a3NQR2wNULMRRfpeu59Linc7LFSHwxisb0mNq9k61NVqO1H8/3A7kRQJmApVnV2dj+TGYizNtq+E1eGMh6pH7+UaYaOUDfK5Nh/Lm0s11ZPO84Xr2DicIxDNfi83SGk2kp9drKv7j8es6EXERjsNIYGAbA5ivtvJFId/PmMSOnBsKzIG1/kGakytNGBE2UhUEnNP140PAcqCCXYSVEsu9zUkMlTE5giATdhAZWIj8FPSQoLAU6kGWWGrIG7DeffOEDrf6Fg3fbL6wyPpgi43Qawr89Fo81kX0I9NxJHZ3E6k6Of6/csLsbz/WkPzA0RKI6tH4Gw2/zdXm3LzckMuzEeqw7v7mdxfG8hnqwN5sJMo/GMY/D7OrrnBxrugHHYApoA5UCGoEm6ixyZbAqDaIBjExgagqoCu6iR6IrONQMPTrA+/oVV1Cqup5eMwwpOFB+r52qCbH6MyAkU9wM6lSgydG4LbCBEg6p29VKnChsFFGF82pRpeQA8jEXvDXB60U3m4k8rqTiqDTiYreSHNVqhRy3cu5HJlzuB3dWAnGANwABHgSBxBmCNphbK6l2qgTb+DNOBtbw7V20W3o1YACZvdTANvSsG6+f2luUgWce4i/9D8gtus8HiRj9G1OiJfphsGmpF0gTtalTg9BhVcD3fBUUQ9TY7XFEVkWakqgQ1CP2MvTALe4PAY7ibUAbIZ5LKXFeqR8iDkAKdCMMcYLnfLMObJBMxIixLrYYDjzzRDqUW+DPNS2r1cHu+l6pnf2EpUknmNCoKB4I54OtJoKUSYqhmv2YW4DxvHIgHVdKPzeHG6zs9GakjhZAjAwPFhM1EV5FwxdilQzY6eDQfcetRTXcrmsJngasdXcODt9aHaAZNhI+hTKncCZZ+0zSYROINgWjpUyQc7J3FUGGBtBXocKV1oBbKx56mUcK1vNoe6fgjw9fpQr8EEhMWX5ghfm8iuS9RUqygmx9FLgBoWTyvFvLxU7i0CT+YthjfIpz5K4fUSs/lfrA00loMkGD/eFPMAQ+9uDaWX5vLx44EaUm4IKTAw11MisvkbndwQnBsvRTE32P3+dip3ZonnhAbtlA6SOoM83hwnsKg+iI0hRWJ7+ybEgB+AHQCBQVCcLzxgxtRUqPkDsD9Q2UFV428cvl3Hg4IcZwE7baEUyOeGZpLqqrdZPIPMFIZXDebWUPatIUOX2gStOkJbvew766jg5lFwDRViYSUeLXobNJQVJlTN11A1I0RUmRdOhcAMY5BNnGp9P5XODkQtZWU3VcYCMSFZqEwmnZkK5Y2FWI030kMChmE8bldMeswEKA+BQeBv0ABcgRSA3d3Yt+pHRXkrkV7XYv96II3Y14KnovQ0kzUg8smN+NWqKRNvIODVqhF1FBmGhSTDQlJCxN1cvt0Y6mcuSc/mY0AhhivWciqJ30MAiEJ4Au4Hyz/YS2V3UMhOJ5Mu9UE455GnvkI2LCSIffV+0f84i86+sTzmY9mBYxIbkOLvIyHAZJ7TVQeS5iMLBA5H5VyaixUdVHPY271c0QvoZ2c3UccH7p8l6mmNYBQQTcylMyhU9ei0FWThWwJALCDndieVzf1c9pJcOr1Mlrc8aWi2LFRJQP2wQWBzUFVRuKo2QwyHiCAaUPmNMzVZ3knliS3IKpNCel4ufu5rLIjd1ZqmKaOyuEeHtlzgToFgQO7brpv8D4+jIMAB5GPjPkoQyvViX2EnC+N51maPGJtdE/FEBT3cSRRrM6KpUBMgPz9r1NV0LVDV4JwlNqpqQF2SHiRjoqi+JMVQCbDbzWU3KTX6ChOQ8sTbxfZgzDHKLJZ5eaAueDg7QLSWNVyZjeQrqzaTpJBkVPRrWBuVyneBrdWCAsZoXnc9JYAtbTxqAozgBE6XBt1CFckbizX1Htk3jCaFTrc3TP4UA9zbSYwj0wjUkeGm373Y0FAFBGCkeWELqowe18vlVLGZ62V5oWoCzt5UyUpEQEaFyD0xCApouND0VeKAvILR90zyBaIYwhQjPwFJwQ5cmAZWIi6lWecASfXV4DdwvLSgINK1B9V+BauCyBdgy/R6SvFAhjDoUW0+yIdle3o/KEhPZqzhdelGFsgYpKXi549X+vLFk75idWCj5kxbgepdgnTvXapriSIqiEVz73CSC6ppZjO3lXEE/fAL0LdFKcs7idxe96WrSph4sCEItUcQglC3Ok98RiBP05Wu+PZgNTrrZoNBcpTPKEoG1nDdhidLNrILoVx+2FXEjYp7gaJwP9fTiY2iPlIJ0IvZEC+JI27WQU+kwC2Om6TcZKub6d9w1gDbEHiKIPg+Hiy/nayOq5YUOgKg+6tjq5PJV+s1jd18mhRSwK01X1ELG4EqY1OI+QxmTVGtUY8myjlZNMf68Acw4KzvNqENNhJgMR8rrAbdgf2rzqWbxtUtLU6HsukIEPsKqY8OBVXzvVavgjRcmSAhCDjXYWI2ex4CLdV00ejGmLjPfCTvWYlhUyZHNdGuqGJi8xl4ob+8UFd1whzFsJCMoF7TGGEMJvaATUX1sEGoPIfQIELVb4LYzMOcEO/qXCwlGxn7cgHncrFmCDBviKl2SvfErA2Hjc8Jle8u1cxWaen9EdmAp+A5cNxuMMgHLuEmNUxgEQHh2rfP1dVwsVEMXH6MGCFnnKYqN/2QgaTdvNBQjv7gckOypJTMph+1osEyAvnZjCKLwEgra4EAXJe1GrRoNhEC/OpKU9UR3rCqE4wv3q8NT2N8sT8wmLEiZi/4/DdXmpp6HSR48J7WAVCBHR5Vjb86XAw4MvYVQiKS6HOCaQ56hlak65HRq6ggYvianCBbFpoHCGSyQvn7DiTvrbO+hgRcznbE0dXyQAdIbDlj7B622aI6IGZjyVTFuSo7Br+DqC58MXZRxr9nL4DiPztraolcE+KPSshUGxE00WKtPrnQM9OhvG0rnHHLJ2tXFU0c4wi1KMuT5uEFDD94sGlsLo/W04XWzx0Qh6o6dYomxgvvRFU8MbzAQcY0xauLNVUBJMdRNT/1UR5x02Z1HI0Rtl0liAAJcsQNZ4e3iJX4Xqg2gO/g/FSdKc96tYH1DPnbQTgcKyAfOtWFdKvh5KMa1Z5f1J4aR4u0vO/oJZgcisqK8Zq1DraSe+AeSSYhDM6T/1EEGHFFZX0GYuaaouMGCAW7OAziBgHA6foT3+hcHC1CvmenAg09YMiwcVo+2DUlhGTLQCxULytxKrH8UW+xXYzr61I17ZS/qiQTL+KavO2a+VizZqd8AwSApxhkDCtGd5TEsb6Crt/aLGenYKr1rrlvin+7nVzD6qktAEMT4N2DvqbrntQC00/2wgRw3eju5g5UM28lWpdDcp2NV8qrgfJMOFhvuBTPSgsODLDzlxcbSgxFITmlIZl89mQgX6wOtT1onbh7WpgKP8rTleusgZ0wso44sKVn4s+yoJsa6QbzJfIQhLHxSfCykUoAwJkpU1sEgqqFpuJap65mFTUEUr3vQm5vJvLH5Y588rAvu1uJDJNChjYIiTP64aWGpmBbcagoSH4UAUb/O0gAauS7Q2I7B7/vVE028hNMrQ8QDa/XoQWQi2vAI6FCrOgfj3pacUzU1NSCmpg/HIiamsx1uGYLfb9yLeYHxYC+YAwwPSrSZeFYu3q+M5GsXGzoXPgOs43GCEggPRTYugo7LgEBqYq49aAnv/2mI/93ryv7lKGw1LlIuhfq6gt0l2q6FI2CWrUWHnkiGEXITbsKaLs7SEvm2T7R1OLWKJANslzNUDfbJbr1+zbsAGeBuzVuQ55Yi3QJ6AeS6a5UFLj9IVVnKp1VAtjycR7oZ2wUMXukjcQNraeyk0iRFrLSy3WT8A1IyrPppnHEOJNVeIyKJEFDZ+afvu3IJ8s92V8bmHiR7dDBt0D14CeAAF1Vx9ERoJrhtgn40d+0kruQpbK2+w16yZMg8jW7hIoy7afjsj/lFGu42AT0qUK5ui8N6/jEgVFxzqhpFTIpAw0zE6owLhHl5DhNOHgkWAgfEKGF6B8/ivQ7H7NpEDoz6o8mCziVIB8lMW/7FJGNUR0xLXINcPzvvu3Il8s9WduyBVjzkVxfrMvNq03t0nz/ckNroXBOqyb96EIRVXUEgSdCBM9SQQtNE/2EE9nkUcuvdY4a1nBiK7pkmTxT9EpMhg1UB0nj+ibhjgRp5Z8VNn1tfQP0O/OghvBRCKChwi5MhyqshIuxW9gZCHNvc6jxfgoCWDvXMo3jZo1UTRPN/cPdrvxxuStb60Mj9bNG5//6SlM7dz5k8xfHvQ8EDPH+ceiOPilv9W8VZjq6cBMuFmV2xRt5vVXYNyIYnM37KvYmlEBZI6Xi79lQNUQwTXSGAGoTgLl2l7QbRYXSFsOSbG+aGJULdRDj2RsUSgCQ0vLGQDY7ubR3Eun3c/0dtgBmYR1IKaqMulS4/+OHPdlC5yeFtEg8na3Jr+D86y35t6stjYW5gCGEBaQQASY8ffQpSauOnHEcqRTe80xVsqohWymX2Zoct1GTKU3epzbTuP+GIHMWOaFG3lyM1ZBXzRDzVf0JvX6l/AQISEDODXT9B5cBAoS6jdRs9vsiXVMXivH/cn2g+htbxTwU25LHvvWwJ4+2LOcT+zpL8XBTPrzc1FA6GbVqtJbM2p+We/LZk75We4TH7jlaA6h0sDUyI/BemNB19a3D5kKvayDPfsnFbnDxMWiTQbsqAZ6a70BBlgltI32oJZ6JG+2Q+x0Usqx6yRjuB9uJ2irAAIyg9UGbQy1d182fMpmzm6815V+vNOVdGs3nCcGPbQYcj9SgrhyqOx19ws8YI+6t1PAQz8fXAD4+3E0UHuJzVEf+1IEethTcdsa4GlHecw19LoyNbdhSv6CU6dCTta1E1ilv2c90PggAisInWacHLCs08XSOxNPFhvzLVbjfGFxXfEDfMFUV2Iw/3+/JP1f6WgO71z4mCTiqUY6bC0fQjxAy3vVXawP1ZO9tJppm9OyZQmVpMnM2LyWZ7UgESdFqijN2ztZtgmimagfFBCJ8dKUpse/JVOjLX72u7G0OtSqDmFcYeVLQ7krlHskgSu1Jypxv6MZ/gG2i2bAZKKFhhlWb/fv7w7785X5XCaHdkyfWI/Y9RjlRrea4lHg6JYx8xvO47Nx8txJ5GKUwmYvNwIiiJjCKvyhrqtMntRQq453zBpWxQVTqrVB8u1doQkVSm4orxo7kFbJ+F+raOvUWJfSz4zAsThpdPv941Jff3emoz6DzMGh7lVM6yopNUETl1HxWah/A/ayU1baxsloaZD83uQWbsrTVy8wDVCWpQnIcYiABV11cycJV18SBWsO40/lyayWWuScDVUEFiSMHo/luzSRkKLkEFuPFX7R5b3cPhDtMA4ep/hvs0cBhingBAqeKAN7Ea6e/D3xmvW2wuUmOW+xUPd7K1EeOakR5r1/4sh+bbkWNyKIBbHbOPSZjzhCN2I2pohMZVhxvfuycRRrysCWaT54I8BO8A/ejOrUkRctYxt1Dp4oAk8M7RB1hEGjyA/uDgLQgouJvuE3FD3DV04SF61ZdoOM17Wj7wZ517A2IBd1NqSQGmfl8Wz2h+FkLKkrtJ6ORBM8ZiUGFuY5PdSZ9c+iHi0Pdhx9s2cuxOGJHNbwK8nEwlEGt0cK0EXlSnRR6waEH+hLUEzaBOuV0MRktPFlNlc7Hqo54TysdK3sPp7oS9L897MkyaIVGQXLWoWmNQoMPiWWlhWzTj7Yx1I1HEqh+i+hpqxt0RXnj5dlIDTT3gKSsbA+10JfW21NFgHLitfOkTQOFjAhArplOSdx9Gi8mK9HceXDubzPXuDkbA4tEgOvVa65wP5Dxk5WBwsW/PuzK/bXEeKy0strD+dLUdMUkVDnQyE0HjdV2zIXqCqwPgKTBLC4ngET8uSikvVFI2T/lEuCNkE3llELi9S0TSiCEQB5h8rSq73LE3HCG14WFGThcLrL52zsd+XS1Lz1K3iPTSQ/hgZdaId1OtVNmwCF+u4ms2g5403xPbZEnl+dEi8DIB/BABWKU9waZ9PGwT82BTc8hgqtcVn1P6pJzNaxTRVHu5JisaDhsTOp9mizubQ3lLw96mn/48oktl+Rwlno0kjrUFyqRNtjZR325u9KXzZ1Eyt1UvqHIzDp8GsMKCP6NW5Tomnz/Ul12B5nGnHh9qgngVIdCQ27K6my4CC8UDgRyItrVaKjGjNw50uMKdmtAqcQzfWpu+4GmNAb+8V5X/nCvp2dUqKPEBA3T0U+VBwcJEgDk7ZV2JmeoAwpEbpWltHdSSdup3F0RyfC0YQ7sVcPXulI3gKpp0dJjNFFjp5YAZXkwGa9OVVYqKiHv+tmqqXAGX+NQQSANxNkaoKpjZrukTKlKbJr+aJNCLYBiUTt/ud+T/73d0VgNCSBGbdpUaXN85geXjKeL3UHoaNzGX0Dd9fNS/oF7sJ3IBiXsj/uq62swjify7kXRoiyuj72iIA0CEBk9VQTwJqAnOhWoBjLRVtN+LklZyj3qO5NCi21bsT211hKAWlHXA6bw1eYHkB7yzWensR81zbQR0uilpcZm8FI5EKrDCVrAR3vQxs2LDU2oQAQSOU7jLbVMuSEdmn2S70UpD7NSNndTyTg1i+KDxJx5RNbs5vmaFqnRKQQMPtM06O5UEUBHJfHN5jkJ0B4rG51Mi1Qe2hNKnLF9yg+jw5LNt34AGH5piiMsaZw2h2d8u+ErwuEISji/Q5U2MZ6GObcObv+vG1N6MCuRzcmCMoz/O+fq6n1rV08h0maJu4kMyRHTYZ+YVCtrAXnBBNgwrapAvcopGuVEjQ5qBfiG2IIgHpDNcUl5dbSAfsWhSXkIoMjJeZ+lyAycarNRGs20HZbE5dVLRaHTSTNtDo/98LWmNoFjfIGskwMHC53ukj2svS+e/BNp3Ev1jCNKVGjkw7fQ0prpQuLAJHYYp4YApetSsS2d3BDcQhkJFdQMPMxyWGoHZq5dEC6ZczDx4g7yhuuqgTO6Yyj85dl0W5pGO4iLGsNTbYSenJsxRhedT+Wz23zXxIG64xQWkA7O3bUF63Wr8fEVeoKgkLLStkWhEiEyv+caLklz4gTw7LNmvnJTLOWcLjA350gTaAMGgkwKdKsrzLLJmsMkYBSWcFV7ti+Mwl0gIHPiJdN7xsaS+WKT8FyRAKKm1xeMp81g8+BmPa5GQyAU3JoL8RuQEo7YVBzI6/ORdGkOBxCExvBCeCQaW8EjLF/SeUHPG14l9+uQiiZNhGfjzqNrXUd8Ndw8qnJ+znBZMHdWXLVD3p0bpDkDLb71NcECF1ePzySHSycnKovvAALcKY/MhxTp2dfTobTPmz6CKmNwb84Ld0khOQ0E8D2D8TFQ7qw3N0AcpjzwZJcJXic2dMumERu+J/d3Ytnu1eWtpbp2Rar01Hx9XJp9eg5Uq/aQT9iSEycAw/Zjm9Mov2ch7MsaSB2nd5GB+/ujnp7kGOSlLK2bRg3U5lTd6P3vGtWQx4H35YRHYR0s9LA7Gux67WAR/mRr6lGPZx1ZT+75wU6q1Q+cYQQRvlobSjkspNU2ZxNhTzCyGOwq8zzrePwTJcCo6qHSQZLk5lANmrWnagNduB7SassZMVUY2gPnjh5B3ZJbgYO+LpHvSsphDAiwskeFnCEA5Ysl1XPUv5aF2gStzgs9LRJArzsUpifyWwKMDwYxJZPVCpCXe2yl+8d4dBfM3/Tk6uF45UC2Oax1faj4uhrJNJWNh/9zIy8yJjqITP2RJbbZIgMrkUrC03jMHMikuVwtDDY+O7bh05W+etU4chBAfQL/4Jon78UQ/YgbtV9YAjLT3U6AjRCvq5I74Nm+jLVVkNL4HwMyx+JoM59zNog3RxX7wHlE3bxS6vLdYfDTYQMqC8xtuGFotM7T/1RSlQDHSQynjxzLVo8aZmBj7b/q5Nai/6rSsJAEteTmqOq4yfV6p9AI63CK2MWOn8X2R0WAyQ0aGYOJ7P+Bqm/jeZvEUOVgjMm1uaT0YWs+tQTwJhTlkXaAveg4fA0up3CgEvxHrPdUEMCrSu4RGtsXGa6dxK3CHb9mtNH43H+p2Iuq1vpJEqCsah1bbzOpHdzfL2Mt5lpGlVT/FcVJFXigT26itPv7rvlUEGByPMvuviRANL7Wc/qDDyPKod/5qRDAe+qPEx4/oEH7Rdd+qghQPvXHT2e86NqP99CGV+O54xUBTni8IsAJj1cEOOHxigBysuP/AcMcFBj0/R0XAAAAAElFTkSuQmCC" alt="American Express"><span>American<br>Express</span></div>
@@ -144,8 +165,12 @@
     <div class="proof-txt"><div class="pn">200+ clientes B2B en Picker, 7 países</div>
     <div class="pl">Proceso de venta estructurado y probado en volumen, no solo en casos aislados.</div></div>
   </div>
+    </div>
+  </section>
 
-  <h2>3 · Alcance del proyecto</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>3 · Alcance del proyecto</h2>
   <p><b style="color:var(--ink)">Duración: 1 mes · 2 sprints de 2 semanas.</b> Mi rol es diseñar el proceso y dejarlo listo para que tu equipo lo ejecute — no voy a cerrar cuentas yo directamente, voy a construir el sistema para que ustedes lo hagan, con acompañamiento cercano mientras se arma.</p>
   <ul class="deliver">
     <li><span class="tag">Sprint 1</span><span class="tx">Taller conjunto para definir el <b>perfil de cadena ideal</b> (ICP) — tamaño, tipo de operación, señales de que vale la pena perseguirla.</span></li>
@@ -156,8 +181,12 @@
     <li><span class="tag">Sprint 2</span><span class="tx">Estructura de pricing para cuentas multi-sucursal.</span></li>
     <li><span class="tag">Sprint 2</span><span class="tx">Sesión de entrenamiento final contigo sobre cómo correr el proceso de ahí en adelante.</span></li>
   </ul>
+    </div>
+  </section>
 
-  <h2>4 · Lo que necesito de Oden</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>4 · Lo que necesito de Oden</h2>
   <div class="checklist">
     <div class="check-item"><span class="num">01</span>Acceso a una cuenta de prueba del producto, para poder hablar con autoridad frente a un prospecto.</div>
     <div class="check-item"><span class="num">02</span>Casos de éxito actuales — testimonios y métricas reales de los 140+ restaurantes activos.</div>
@@ -165,8 +194,12 @@
     <div class="check-item"><span class="num">04</span>Estructura real de costos y márgenes, para poder construir pricing de cuentas grandes.</div>
     <div class="check-item"><span class="num">05</span>Qué tan flexible es el producto para pedidos específicos de una cadena (multi-sucursal, reportes consolidados, permisos por rol).</div>
   </div>
+    </div>
+  </section>
 
-  <h2>5 · Inversión</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>5 · Inversión</h2>
   <div class="price-box">
     <div class="pt">Proyecto cerrado — Fase 1</div>
     <div class="pv">$2,000 USD</div>
@@ -177,8 +210,12 @@
     </div>
   </div>
   <p style="font-size:13px;">Si después de este primer mes quieren que siga acompañando la ejecución mientras ustedes venden, lo conversamos como una segunda fase — separada, y solo si tiene sentido para ambos en ese momento.</p>
+    </div>
+  </section>
 
-  <h2>6 · Próximos pasos</h2>
+  <section class="slide">
+    <div class="slide-inner">
+<h2>6 · Próximos pasos</h2>
   <div class="checklist">
     <div class="check-item"><span class="num">1</span>Validar este alcance en la llamada del lunes — ajustamos lo que no calce con cómo ven ustedes su propio ciclo de venta y mezcla de planes.</div>
     <div class="check-item"><span class="num">2</span>Confirmar fecha de arranque del Sprint 1.</div>
@@ -191,7 +228,34 @@
   </div>
 
   <footer>Oden Food × Ricardo Astorga — Scope of Work, noviembre 2026</footer>
-
+    </div>
+  </section>
 </div>
+
+<div class="nav">
+  <button id="prevBtn" aria-label="Anterior">←</button>
+  <span class="cnt" id="cnt">1 / 7</span>
+  <button id="nextBtn" aria-label="Siguiente">→</button>
+</div>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('.slide');
+  var i = 0;
+  function show(n){
+    n = Math.max(0, Math.min(slides.length-1, n));
+    slides[i].classList.remove('active');
+    i = n;
+    slides[i].classList.add('active');
+    document.getElementById('cnt').textContent = (i+1) + ' / ' + slides.length;
+  }
+  document.getElementById('nextBtn').onclick = function(){ show(i+1); };
+  document.getElementById('prevBtn').onclick = function(){ show(i-1); };
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight' || e.key === 'PageDown') show(i+1);
+    if(e.key === 'ArrowLeft' || e.key === 'PageUp') show(i-1);
+  });
+})();
+</script>
 </body>
 </html>
