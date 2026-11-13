@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Oden Food — Scope of Work</title>
+<title>Oden Food · Scope of Work</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -90,12 +90,30 @@ h2.slidehead b{color:var(--rose);}
 .eq-box .en{font-family:'Fraunces',serif; font-weight:700; font-size:24px;}
 .eq-box .ed{font-size:11px; color:var(--muted); margin-top:6px;}
 .eq-sym{display:flex; align-items:center; font-family:'Fraunces',serif; font-size:23px; color:var(--muted); padding:0 2px;}
-.insight-block{margin-top:20px; background:var(--navy); color:#fff; border-radius:14px; overflow:hidden;}
-.insight-row{padding:18px 26px; display:flex; align-items:center; gap:18px;}
-.insight-row + .insight-row{border-top:1px solid rgba(255,255,255,0.14);}
-.insight-row .il{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#8fd6c4; flex:none; width:120px;}
-.insight-row .it{font-size:17px; line-height:1.45;}
-.insight-row .it b{color:#fff;}
+.insight-block{margin-top:20px; background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+.insight-row{padding:18px 26px; display:flex; align-items:center; gap:18px; border-left:4px solid var(--rose);}
+.insight-row.gold{border-left-color:var(--gold);}
+.insight-row + .insight-row{border-top:1px solid var(--line);}
+.insight-row .il{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--rose); flex:none; width:120px;}
+.insight-row.gold .il{color:var(--gold);}
+.insight-row .it{font-size:17px; line-height:1.45; color:var(--ink);}
+.insight-row .it b{color:var(--ink);}
+.money{color:var(--rose); font-weight:700;}
+.eq-label{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-top:28px;}
+
+/* ---- open questions (slide 2) ---- */
+.open-q{margin-top:22px;}
+.open-q-label{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-bottom:10px;}
+.open-q-row{display:flex; gap:14px;}
+.open-q-item{flex:1; background:var(--surface); border:1px dashed var(--line-strong); border-radius:12px; padding:14px 16px; font-size:13.5px; color:var(--sub); line-height:1.4;}
+.open-q-item b{color:var(--ink);}
+
+/* ---- logo wall (trayectoria) ---- */
+.logo-wall{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;}
+.logo-tile{flex:1; min-width:118px; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 8px 12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center;}
+.logo-tile img{height:24px; max-width:78%; object-fit:contain;}
+.logo-tile .wordmark{font-family:'Fraunces',serif; font-weight:700; font-size:14px; color:var(--ink); line-height:1.2;}
+.logo-tile .lt-name{font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.03em; text-transform:uppercase; color:var(--muted);}
 
 /* ---- trayectoria: hero logo timeline + revenue range ---- */
 .hero-tl{position:relative; margin-top:32px;}
@@ -195,7 +213,7 @@ h2.slidehead b{color:var(--rose);}
         <span class="brand2">RICARDO ASTORGA</span>
       </div>
       <h1 class="serif">Tu producto está listo para cuentas grandes.<br><span class="accent">Tu proceso comercial, no.</span></h1>
-      <p class="sub">140+ restaurantes y cero proceso para llegar a clientes con más sucursales y más presupuesto. Este documento define cómo lo construimos juntos.</p>
+      <p class="sub">140+ restaurantes confían en Oden. Ninguno es todavía una cuenta grande. Este documento define cómo lo construimos juntos.</p>
       <div class="meta-strip">
         <div><b>Javier Olán</b>AUTOMATIC73</div>
         <div><b>Ricardo Astorga</b>CONSULTORÍA COMERCIAL</div>
@@ -222,6 +240,14 @@ h2.slidehead b{color:var(--rose);}
         </div>
       </div>
       <div class="callout-line">Ni siquiera están moviendo a sus clientes actuales de <b>Básico a Pro</b>. El problema no es solo conseguir cuentas nuevas — es que no hay ningún proceso comercial activo, ni para crecer lo que ya tienen.</div>
+      <div class="open-q">
+        <div class="open-q-label">Lo que resolvemos juntos en la sesión de diagnóstico</div>
+        <div class="open-q-row">
+          <div class="open-q-item"><b>¿Cuál es el perfil real de una cuenta grande para Oden?</b> Tamaño mínimo, vertical, señal de dolor.</div>
+          <div class="open-q-item"><b>¿Cómo migran hoy a un cliente de Básico a Pro?</b> ¿Hay proceso o es espontáneo?</div>
+          <div class="open-q-item"><b>¿Alguna cuenta grande ya tocó la puerta antes?</b> Y si no avanzó, por qué.</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -230,6 +256,7 @@ h2.slidehead b{color:var(--rose);}
 
       <span class="tag rose">El diagnóstico</span>
       <h2 class="slidehead">No es un problema de producto. <b>Es que nadie vende.</b></h2>
+      <div class="eq-label">Así se construye el número →</div>
       <div class="eq-row">
         <div class="eq-box in"><div class="el">Una cuenta grande</div><div class="en">20 locales</div><div class="ed">tamaño conservador</div></div>
         <div class="eq-sym">×</div>
@@ -241,7 +268,7 @@ h2.slidehead b{color:var(--rose);}
       </div>
       <div class="insight-block">
         <div class="insight-row"><div class="il">La causa real</div><div class="it">Javier y el equipo <b>construyen el producto</b> — nadie está dedicado a <b>venderle a cuentas grandes</b>.</div></div>
-        <div class="insight-row"><div class="il">El riesgo extra</div><div class="it">En Picker, <b>80% del churn</b> venía de cuentas chicas — las grandes casi no cancelan. Quedarse solo en Básico no es solo menos revenue, es más fuga de clientes.</div></div>
+        <div class="insight-row gold"><div class="il">El riesgo extra</div><div class="it">En Picker, <b>80% del churn</b> venía de cuentas chicas — las grandes casi no cancelan. Quedarse solo en Básico no es solo menos revenue, es más fuga de clientes.</div></div>
       </div>
     </div>
   </section>
@@ -262,6 +289,17 @@ h2.slidehead b{color:var(--rose);}
         </div>
       </div>
       <div class="range-bar"><div class="rn">$300K–$400K</div><div class="rl">USD al año — rango real de las 13 cuentas enterprise que cerré personalmente en Picker.</div></div>
+      <div class="eq-label" style="margin-top:22px;">Algunas de esas cuentas, todas públicas</div>
+      <div class="logo-wall">
+        <div class="logo-tile"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzA1IDE0NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkYXRhLW5hbWU9IkNhcGEgMSIgaWQ9IkNhcGFfMSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2UyMGUxOTsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGc+CiAgICA8cGF0aCBkPSJNNTAzLjEzLDQ1LjczYy40LDEuNzUsMS4wNCw0LjcyLDQuMTgsNi4yOSwzLjIxLDEuNjIsNy41LDEuMjEsMTIuNzMtMS4yLDEuMjEtLjU1LDIuNDItLjg5LDMuNTEtMS4zMiwuOC0uMzEsMS4yOS0uNzUsMS41MS0xLjQ1bDEuMTMtMy41NmMxLjQ0LTQuNTMsMi44OC05LjA2LDQuMy0xMy41OSwuNTUtMS43NCwxLjExLTIuMiwyLjY4LTIuMTZsMjMuMjgsLjA1Yy4zMywwLC42MywuMTYsLjgzLC40MiwuMiwuMjcsLjI1LC42MSwuMTUsLjkzbC0xLjE2LDMuNjZjLTEuNjIsNS4xMS0zLjIsMTAuMDctNC43MywxNS4wNS0uNiwxLjk3LTEuMTksNC4wNi0xLjI2LDYuMTgtLjA2LDEuOTgsMS4zOSw0LjA3LDMuNjksNS4zMywyLjEsMS4xNSw0LjMsMS4yNCw1Ljc0LC4yNSwuNjktLjQ3LC45OS0xLjQzLDEuMjctMi4zbDEuMzItNC4xOGMyLjQtNy42LDQuODgtMTUuNDUsNy4yMi0yMy4yMiwuNTMtMS43NSwxLjAzLTIuMTIsMi42Ny0yLjE3LDYuMTIsLjEsMTIuMTIsLjA5LDE4LjQ3LC4wN2g0LjlzMCwwLDAsMGMuMzIsMCwuNjEsLjE1LC43OSwuNCwuMTksLjI1LC4yNCwuNTcsLjE1LC44N2wtMjIuMDcsNzAuNTdjLS43MSwyLjIzLTIuMTIsMi4xNi0yLjM3LDIuMTNoLTIzLjQ2Yy0uNDIsLjAxLS44MS0uMTgtMS4wNi0uNTMtLjI2LS4zNS0uMzMtLjc5LS4xOS0xLjJsLjg0LTIuNjNjMS45My02LjAzLDMuNzYtMTEuNzcsNS42LTE3LjU1LC4yLS42MywuNDItMS4zOCwuNTYtMi4xOCwuNDktMi44NCwuMjItNC44Mi0uODUtNi4yNC0xLjAzLTEuMzYtMi43NC0yLjEyLTUuMzgtMi40LS4yNC0uMDItLjQ3LS4wNC0uNjktLjA0LTEuOSwwLTIuOTgsLjk1LTMuNjUsMy4xNC0yLjUzLDguMjQtNS4zNywxNy4xOC04Ljk2LDI4LjExLS4xOCwuNTUtLjg2LDEuNDMtMS44OSwxLjQzLTMuODIsMC03LjQ3LC4wMi0xMS4xNSwuMDUtMy43MiwuMDItNy40NiwuMDUtMTEuNDEsLjA1LS42NywwLTEuNDEsMC0xLjgxLS41NC0uMjUtLjM1LS4zMi0uNzgtLjItMS4xOGwxMC41OC0zMy43Yy4yMS0uNjcsLjgtMi4xMSwuMzktMi42OC0uMzYtLjQ5LTEuODQtLjA5LTIuNTQtLjA0LTEuNTksLjEzLTMuODcsLjA2LTUuMjQtLjI3LTguMTMtMS45Ny0xMS4yOS04Ljk5LTkuNDEtMTguNDcsMCwwLC4wNC0uNDMsLjQ1LS40OSwuMzctLjA1LC40OCwuMDgsLjU0LC4zMVoiIGNsYXNzPSJjbHMtMSI+PC9wYXRoPgogICAgPHBhdGggZD0iTTM0My4yNSwyMi45MmMtMS41NywwLTMuMiwuMjktNC44LC45LTMuMTQsMS4yLTUuNjIsMy40Ny02LjgsNi4yMi0uOTEsMi4xMi0uOTYsNC4zOC0uMTMsNi4zNywxLjk3LDQuNzQsOC4yOSw2Ljc5LDE0LjEsNC41NiwzLjE0LTEuMiw1LjYxLTMuNDcsNi43OS02LjIyLC45MS0yLjEyLC45Ni00LjM5LC4xMy02LjM3LTEuNDMtMy40NC01LjE1LTUuNDYtOS4zLTUuNDZaIiBjbGFzcz0iY2xzLTEiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik00OTYuNTQsNDYuMTVsLS44NCwuMzJjLTMuNDMsMS4zMS02LjY2LDIuNTYtOS44OCwzLjctLjk2LC4zNC0yLjQzLC4yOC0zLjI0LS40LTMuODgtMy4yOS04LjM2LTQuOTEtMTMuNjMtNC45MS0uODMsMC0xLjY3LC4wNC0yLjU0LC4xMi03Ljg3LC43Mi0xNS43Myw1LjQ4LTIxLjU2LDEzLjA3LTYuNjYsOC42Ny05LjY2LDE5LjYxLTguMDEsMjkuMjcsLjc2LDQuNDYsMi44NSw3Ljg0LDUuODgsOS40OSwyLjc4LDEuNTEsNi4xMiwxLjUyLDkuNjcsMCwxLjMxLS41NiwyLjY0LTEuMzMsMy45My0yLjMxLDMuMjUtMi40Myw1LjEtNC4wMSw3LjM4LTYuNTIsLjM0LS4zNywuOS0uOTcsMS4zMy0uNzMsLjQzLC4yNCwuNDEsLjksLjI2LDEuNjhsLTEuNzEsNS44NmMtLjE0LC40LS4xNCwuNzksLjAxLC45NHMuMzUsLjI4LC43OSwuMjhoMS42OGM0LjU4LDAsOC44OS0uMDEsMTMuNzksLjA2aC4wNGMxLjA3LDAsMi0uNjgsMi4zMi0xLjcsMi45My05LjM1LDUuOTItMTguNjYsOC45MS0yNy45OGwyLjI2LTcuMDVjMS4wMy0zLjIsMi4wNi02LjQsMy4xNi05Ljc4bC44NS0yLjYyYy4xMS0uMzUtLjA4LS41Ny0uMTctLjY2LS4wNy0uMDYtLjMyLS4yNi0uNjgtLjEzWm0tMjQuMzIsOS4xOGwtLjAyLC4yMmMtLjc5LDkuMi0zLjQ2LDE3Ljc1LTcuOTMsMjUuNDMtLjI4LC40Ny0uNjIsLjk0LS45NiwxLjMyLS44MiwuOS0xLjYyLDEuMzYtMi4zOCwxLjM2LS4yMSwwLS40Mi0uMDQtLjYzLS4xMS0uNzMtLjI1LTEuMzEtMS4xOC0xLjcyLTIuNzYtLjI2LS45OS0uMjctMi4wNS0uMjEtMy40MywuNzgtOC44MywzLjI2LTE2Ljk1LDcuMzgtMjQuMTgsLjczLTEuMjgsMi44LTMuNTYsNC4zNy0zLjI5LDIuNTUsLjMsMi4yNywzLjUyLDIuMSw1LjQ0WiIgY2xhc3M9ImNscy0xIj48L3BhdGg+CiAgICA8cGF0aCBkPSJNMzk1LjE1LDU4LjU3YzEuMDUtMi4zNSwzLjE4LTcuNDQsNC41LTEwLjcxLC4xLS4yNSwuMDctLjUyLS4wOC0uNzQtLjE2LS4yMy0uNC0uMzYtLjY4LS4zNi03LjIyLDAtMTQuMSwuMDItMjAuOTMsLjA0LTYuNzMsLjAyLTEzLjQxLC4wNC0yMC4zMSwuMDQtMS4zNiwwLTEuNzYsLjY1LTEuOTUsMS4yMmwtNS4xLDE2LjA3Yy0uMDYsLjE5LC4wMiwuMzMsLjA3LC40LC4wNSwuMDcsLjE3LC4xOCwuMzYsLjE4aDE2Ljc0Yy41NiwwLDEuNzUtLjAyLDEuOTcsLjQ5LC4yMiwuNTEtLjU4LDEuNDYtLjk3LDEuODZsLTI3LjE2LDI3LjQ5Yy0uMTcsLjEzLS4yMSwuNTYsMCwuOCwuMTYsLjE3LC4zOSwuMjMsLjc0LC4xNCwxLjQ5LS4zNywyLjkxLS43Myw0Ljg5LS43Myw1LjQ5LDAsMTIuNDEsMS42NiwxNy42Myw4LjQ5LDcuOTQsMTAuMzksMTkuNjUsMTcuMzksMjkuODMsMTcuODEsNi42NiwuMjksMTIuNDMtMi4xOCwxNy4wNy03LjMxLC4zMi0uMzUsLjMyLS45NCwuMTMtMS4zLS4xNy0uMzItLjM4LS4yOS0uNDYtLjI5LTUuNiwuNjUtMTEuMDItMi44NS0xNi42My0xMC42MS04LjM3LTExLjYxLTE4LjQxLTE3LjY3LTI5LjU0LTE3LjAyLS41NSwuMDEtLjkxLC4xNC0xLjEtLjM4LS4xOS0uNTEsLjEzLS44MiwuNTctMS4xNWwyOS42Ny0yMy40OWMuMzItLjI1LC41Ny0uNTcsLjc0LS45NFoiIGNsYXNzPSJjbHMtMSI+PC9wYXRoPgogICAgPHBhdGggZD0iTTMyNi45Miw0OC45N2gwcy0xNC43NSw0Ni4zOC0xNC43NSw0Ni4zOGMtLjA3LC4yMSwuMDIsLjM3LC4wNywuNDUsLjEsLjE0LC4yNSwuMjEsLjQyLC4yMWg0LjNjMi4xMS0uMDEsNC4xOS0uMDIsNi4yMy0uMDIsMy41NCwwLDcuMDIsLjAyLDEwLjUyLC4wNywxLjE1LS4wNCwxLjU2LS4zLDIuMDEtMS43MmwxNS4xMi00Ni45M2MuMDUtLjE2LC4wMi0uMzItLjA3LS40NXMtLjI0LS4yMS0uNDEtLjIxaC0xLjE2Yy0xLjgxLDAtMy42MiwwLTUuNDMsLjAyLTQuNTgsLjAzLTkuMzMsLjA1LTEzLjk5LS4wOC0xLjcxLS4xMi0yLjI4LC40NS0yLjg1LDIuMjhaIiBjbGFzcz0iY2xzLTEiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik00NTQuMDMsMTA2Ljg2Yy00LjE1LC42MS0xMi4yNC0uMDctMjAuMjQtMTIuMzYtNy40OC0xMS41LTE2Ljc2LTE0LjM2LTIzLjEyLTE0LjM4LS41NCwwLS44NywuMDctMS4wNC0uNDMtLjE3LS41MSwuMDUtLjgyLC40Ny0xLjE1bDI2LjQ2LTIwLjg5Yy4zMy0uMjUsLjU3LS41NywuNzQtLjk0LC44OS0xLjk4LDIuNjItNi4xMywzLjcxLTguODMsLjEtLjI1LC4wNy0uNTMtLjA4LS43Ni0uMTUtLjIzLS40LS4zNi0uNjgtLjM2LTYuMDksMC0xMS43LC4wMi0xNy4yOCwuMDMtNS41MiwuMDItMTEuMDIsLjAzLTE2LjkzLC4wMy0uOTMsMC0xLjQxLC42NS0xLjU0LDFsLTUuMywxMy42Yy0uMDgsLjIsMCwuMzYsLjA1LC40MnMuMTYsLjIsLjM3LC4yaDEzLjg4Yy41NiwwLDEuNDktLjA2LDEuNzYsLjQzLC4xNiwuMy0uMTgsLjcxLTEuMTgsMS42MmwtMjMuMzksMjIuOTNzLS42NCwxLjIzLC43NywxLjEyYy43Ni0uMTMsMS45NC0uMzMsMy41MS0uMzMsNC4xMSwwLDEwLjMsMS4xNCwxNC44Myw3LjAzLDguMjcsMTAuNzUsMTguODUsMTcuMzIsMjkuMDIsMTguMDMsNi4xOSwuNCwxMS43LTEuNCwxNS41My01LjE1LC4yMS0uMiwuMi0uNTcsLjE3LS42NC0uMDUtLjEtLjI4LS4yNC0uNDktLjIyWiIgY2xhc3M9ImNscy0xIj48L3BhdGg+CiAgICA8cGF0aCBkPSJNMjY0LjgxLDEwMC40MWwxNC41My00Ni44NmMxLjUzLTUuMywyLjIyLTcuNDMsNC4xNC0xMi4yNCwxLjE0LTIuODUsNC42NS00LjE3LDcuMjQtMy43MSwxLjY5LC4yOCwzLjExLDEuMzQsMy43OCwyLjgyLC45OCwyLjE2LDEuMTcsMy40LDEuMyw2LjU3LS4yMyw0LjAzLTEuNDgsMTMuOTEtOC4xMiwyMC4zMy0uOTgsLjk0LTIuMzEsMS43My0zLjY3LDIuMTUtMS4zOSwuNDQtMi43MSwuMzctMy44LS4yLS4xNy0uMDktLjM1LS4xLS41MS0uMDMtLjEsLjA0LS4yNCwuMTQtLjMsLjM1LTEuMDgsMy43LS4zNCw4LjU0LDQuOTYsMTEuMDJoLjAyYy44MywuMzEsMS41NywuNTksMi4zMSwuNzMsNy4zMywxLjQ0LDEzLjU2LDAsMTkuNTUtNC40Myw5Ljc4LTcuMjMsMTQuNjYtMTcuODUsMTMuNzUtMjkuOTEtLjM3LTQuOTYtMi40Ni05LjEyLTYuMDMtMTIuMDItNC40Ni0zLjYzLTkuNzMtNS42LTE1LjY1LTUuODYtNi42Ni0uMjktMTMuMzktLjI1LTE5LjkxLS4yMi01LjA2LC4wMi0xMC4yOCwuMDYtMTUuNDYtLjA3LS4wNSwwLS4xMSwwLS4xNiwwLTEuNiwwLTIuNSwuNjMtMi45MywyLjAxbC0yMi4zMyw3MC4wMWMtLjE0LC40Mi0uMDYsLjg3LC4yLDEuMjNzLjY3LC41NywxLjExLC41N2gyMy4wOGMxLjc1LC4wMiwyLjM0LS40MywyLjg5LTIuMjZaIiBjbGFzcz0iY2xzLTEiPjwvcGF0aD4KICAgIDxwYXRoIGQ9Ik02MTguNDksNDYuNzJoLTE4LjMyYy0xLjE5LDAtMS42MiwuNzctMS43NywxLjIybC01LjIxLDE1LjMzYy0yLjExLDYuMzQtMy4xOCw5LjUyLTQuNTMsMTYuNDEtLjY4LDMuNDUtLjAxLDYuNzYsMS45Myw5LjU3LDIuMzMsMy4zOCw2LjQ2LDUuODcsMTEuMDQsNi42NSw0LjE0LC43LDguMzYsLjY1LDEyLjIyLS4xNiw4Ljg2LTEuODUsMTQuOTctNy45NiwxOC42OS0xOC42OGwxMC42Ny0zMC4xYy0uMDUtLjE2LS4xMi0uMjEtLjI0LS4yMS02Ljc4LS4wMy0xMy4zMi0uMTMtMTMuMzItLjEzLTEuMTItLjAzLTEuNTEsLjE4LTEuODUsMS42Ni0yLjMxLDkuOS00LjM5LDE4LjM4LTcuMjIsMjkuNjYtLjY3LDIuNjYtMS41OSw0LjY2LTIuNzQsNS45Ni0yLjA0LDIuMjktNC4zNSwxLjYtNS4yMiwxLjM0LTEuNTctLjQ3LTIuNzctMi41Mi0yLjkyLTQuMTMtLjIyLTIuMzcsLjQ0LTQuOTUsLjk2LTYuNywxLjQ5LTUuMDYsMy4xLTEwLjA1LDUuMDQtMTUuNjksMCwwLDEuNDMtNC45MSwzLjU5LTEwLjIsMCwwLC44Ny0xLjg5LS44LTEuOFoiIGNsYXNzPSJjbHMtMSI+PC9wYXRoPgogICAgPHBhdGggZD0iTTY2Ny4wNiwzNS41M2MtMS41NCwzLjM3LTYuMzQsMTEuMTktMTcuNjUsMTEuMTktLjMxLDAtLjU5LC4zNS0uNywuNjhsLTMuMDUsOS4wN3MtLjMsLjgxLC4zNywuODZoNC4zNnMxLjE5LS4wOCwuOTIsMS4xNGMtLjIsLjg5LS42NiwyLjM4LS44NSwzLjA3LS41LDEuODMtMS4wMywzLjY2LTEuNTcsNS40OC0xLjE4LDQuMDEtMi40LDguMTYtMy4xNCwxMi4zMi0xLjM2LDcuNjYsMS42OSwxNC4xOSw3LjYxLDE2LjIzLDYuMDEsMi4wOSwxMS42NywxLjM0LDE2LjgyLTIuMjIsMi42MS0xLjgxLDQuNjgtNC40Miw2LjMxLTcuOTgsLjA3LS40Ny0uNTUtLjIxLS41NS0uMjEtMi43NiwuNjItNC40OCwuMTctNS44MS0xLjI2LTIuNzktMi45Ny0uOTctOS4yNy0uODktOS41MywuOTUtNC4xNywyLjMzLTguMzMsMy42Ny0xMi4zNmwuOTYtMi45MmMuMjYtLjc5LC41LTEuNjIsMS41My0xLjY4LDEuMjYtLjA2LDMuMTktLjA3LDQuNTYtLjA1LDEuMjUsMCwyLjM1LS4wNSwzLjUxLS4wNXMxLjM3LS43NywxLjQ4LS45MmMxLjItMy40NiwxLjc1LTUuMTMsMi45OC05LjA0LC4wNy0uMjItLjAzLS4zOS0uMDgtLjQ2LS4wNi0uMDgtLjE4LS4yMS0uNC0uMjFoLTguMDdjLS40MiwwLTEuMDgsLjAxLTEuMzMtLjMzLS4yNi0uMzUtLjA4LS45MiwuMDUtMS40NGwyLjk5LTkuNTNjLjE5LS41My0uNDEtLjQ4LS40MS0uNDhoLTEyLjY3cy0uNzctLjA5LS45NiwuNjJaIiBjbGFzcz0iY2xzLTEiPjwvcGF0aD4KICA8L2c+CiAgPHBhdGggZD0iTTIwNy43Myw4NC4zMmMtOC4xNS0zLjItMzIuMDMtMTIuNjItNDEuNDItMTcuMDYtLjQ0LS4yMS0uNzUtLjYyLS44NS0xLjA5LS45NS00LjgzLTIuNjUtMTMuNC0zLjY3LTE4LjQ3LS40OC0yLjM4LTIuNTctNC4xLTUtNC4xSDg3LjQ5Yy0xLjc3LDAtMy40MiwuOTItNC4zNSwyLjQzLTIuODMsNC42My05LjAxLDE0LjcyLTEyLjMyLDIwLjE2LS4zMywuNTQtLjcxLC44NC0xLjI4LDEuMDYtMTUuMjMsNi4wMy00NC4yNiwxNS42NS01MC42MSwxNy43NC0uNzksLjI2LTEuNDIsLjg2LTEuNzIsMS42NC0uNywxLjgyLC42NSwzLjc3LDIuNTksMy43N0gyMDYuNThjMS4zNiwwLDIuNTYtLjg3LDIuOTktMi4xNiwuNTMtMS41OS0uMjctMy4zMi0xLjgzLTMuOTNaIiBjbGFzcz0iY2xzLTEiPjwvcGF0aD4KPC9zdmc+" alt="Pizza Hut"><div class="lt-name">Pizza Hut Colombia</div></div>
+        <div class="logo-tile"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFXUlEQVR4nK1Wa0xURxT+5t59Ly4sCwhkEfGBoEhFjLT+qEmTlsRH+wNs7EODVtOgwZqYNFq1/mjSSNI2tUVtQopWrfxpm7Rpk4bEGuMPDUElborRRoGIkUioyLKvu/fOaWa2uwK7a5TlS869d2bumfOdb87MvYz7fBBg/QNIgqqASkvByssBsxmZgO78A3b7dqxhtQKramNxjeZm6CdPVlmgliW7GYYGDJoOfPI329UM5vXOmECE2cqt0JfEWiwC6D105uy/oM3vQgdOUE4ukdsz1Tz5xMH6olA+DwJe49IlEOcgohc2HWinbHds3sJi0qFu4a2tUEAcKlQ3IhFA06ZaOAzmcFaanM4DNrAftLVrX+WnTsv+F4UCtTQRIxAAg1EEMCjiApC4AIwlm6LEhuyO16xg7cYHO7fzQ4dBjx7NYCHYFEpPr1MGBB+a5scAVRVqlJvzPN/zL7/6IjB3bj6/cQOZQknqEcEtlmQS8m0FCIVgysraZwdrD69cWcN//gXQ9VkkwDn447EfZbBUJIQaRFDtjrfsYKf0xrcb+NFW0NjYLBEgEpU5qPv9rWSzSUIpSYglsTteMhcV/sQPf3roidut0O07s0BAQlFMZOzXR0f3UFZWGIaBlBAknjyByeX6bA6UM1pF9RLe1ZVauRcjEIOZjG+jj0Y2UyjkkyTS1YVhQLXb3zNBOx2tr3+Dtx2XWy1jAgIW0n8Ng++gUPAvSSBdXSiKqIuXLVmuc8aej1r4x/tBQ0PImICAnag7AtphBENnn1mcYkk4zze73d/QiZPHwyUlXrpyBRkTELAR9Qdg7NT8/lakK04BQVDToDrsuyxgHcaaNa/ws+cyJyDgIopYyNgfHR1tJkUZSVuc/5+iqt3xugqlw9jatAXglDGBOMxkfKdNBLdSKNyTtjifbtUKc0H+GQ5kTz9wBWZEQMBK0T+jMLYboeBv8cMpJVRF7gjVlV0X/67MCgEBC5EvDPpQnxg/Jo/vdHUhCAqlxH0aFOD5D41UcBINm4j2Rh4/3kt2+8Qz6yIFlNhAZiQErGQc00ZH3qFQsDdtXaQiwFetEneS8sUNfIYk6PcQTDuMUPgPmZhuPJ0zbpMPs5ISMAoEoDvn7FOBJrF5CGAc/GuVqH1GLAAEGJtrBd5Xob7JQJ7p4wQYHOyoOjHeycT/msT9+zFmgnlJCWYFo6OpvwmTY9BzrlX853JyeyZ+06EwxlBUVIR169YlDRYWFqK0tDTR5pxj06ZNqKmpgfAT4/X19Sknzs7OTurLyclJPDudzhgBABgfH8fy5ctlR0tLC3bv3o2LFy9i0aJFMtBkAtJJUbBt2zaMjY1h2bJlU/wuX76cyDyVGmlRUVGBhQsXorGxMfFyVVUV5s+fn2hHo1GpwIoVK3Dv3r2E34IFC9DQ0DAliKqqqKysxOrVq6UtXbpUEk9SYGRkBEeOHJGNu3fvQtM05OXlycyFZOkycbvd8t7V1SXJGIYBj8eTUMxms+HWrVvo7u6W1tfXB4fDkZw5kTgCOAYHB3H+/HnZV1ZWhvXr18tnl8uFzs7OBBGR1caNGzE8PIyHDx/Ku0hCIK7W5PW+cOGCNAFBeroCTFzq6uokc2GBQAAWiwU9PT3yhaamJly9ehW5ubnw+/0oKChITCikFbLG/UwmE65fvy7HRPGKpOLExTsisf7+ftn2er0YGhqCSUjz4MGDhHRiErGmvb29qK2txcGDB9HR0SEzFZVdXV0tJRfZiACT/USAmzdvyhoZGBiQfXFcu3YNwWAQ8+bNk6r6fD4ZJ+3XUMhcXFyMtra2pDGReTps2LAh8SyWK47FixendPgPpymhk6UyqYQAAAAASUVORK5CYII=" alt="Niu Sushi"><div class="lt-name">Niu Sushi</div></div>
+        <div class="logo-tile"><img src="data:image/png;base64,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" alt="Papa John's"><div class="lt-name">Papa John's</div></div>
+        <div class="logo-tile"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFbUlEQVR4nO1YTWhcVRQ+93XGn0hiiFa0Telgu2ho00YXEWJh3izaRrEIwY0hmLoQXLgtgl1MZqFQddmF7owEsvEHqdCULuYNqJSutKNGxEBSq6JpazLB1qbT9+Sce8+bc++8SZpmUlqcD4Z57757z/85954L0EILLbTQwjqgYIPw3M6uDvl+6pcrlbtagcG9j41BFGUBwBfDgXjm8QCUKkEYBlPfX5Lf77wCJDQiivKgVAEfp87/NTa451EtrOf5KGi8gN+VyhuFAoiiwnoUiRVAprdKyFg7FjoGjtWQREsLrefqtbehDPJHQ9kK9G4uCkG0NQ0xsihaj4VUqkCWZkUA4NAz6fHfL90cfX4gXXqiC/ZJhn9cge/w//EuNTt19iacPledjcNN1dEKVuWv/3P43QqheGJSLIu4lcyGD6b9/h5vYUe31wlrwJdfV2c//KI6bniR0Yg2yqC9AkkysOUZyixg61tuHOzdHE2V5+uVVKo4fDANLx9IwXrx1fmwdHxiOZCetfgJGRxZyQseaYuxHEU5sjK7KgFM4J3X72+K8Ij9e73smyP3oddzqERcAJKgPROQQiizUnmP3MSVAq0QhhQiqLlVaQwBtHzvDlzWPOxHJV55YMwIFVuYeWN+GuOVnLDyFQkqE4kVQWK65BXJOp7nDx9I5Ztl+SSc+KQ6TgmOYN5SDh0pWUpyk6ueGcxTFULB9S8nNhr2jk62DUT2KW/U8OIkDuKcMCEWh5KWs6Dqqo92k0WENFaqePK9BzdaB0gPXsCoQGuXhNF0jkgZjYEpmPGBNDXC0zMuwOfyPCZ3vtlx36gigQDx5r2CNzhTSvm9oVRxKdV54ZdnQpg8U90QwWcuhgsY/8c//pfz0JcVyS2tEnaN17txbbu3M74OzfJKeSZcbYqUx9qrdA6II8E9A6Urp7sTQ8/D1jEephcrNIb/SXC/8Xoek/RWGlttfSL/KMqlTGbHY0PdW2Kh8H/km3NwbPcu+OzX3+gnMTHQr+ft3gVv//AT9HS0w9C2rTQ23dFO8y16Zh4CaU6bMUkbxxE4D7/zepRje1sbPJTaBD9WlrQAnuen3Po+bT4yI3c8VtQISoIbK+EYMyblKksWPRQOlZRjQ9u20k8aR1pb8p27epWUEB7INsxCFMoNp0Ygi7PLO9oT1zWi12M8JY2CQqPlk4BKSKTMhhFXGxZgyNGeLCdj3RE0jlVnDc87ZsJIfp8Y6LfWSO8wvUYGqSng4FZDyH23vhlF5ZykEBox+YVjDPSCNMpKfND4ntWzCiAhTigiZhJUWpo8JeZx0rEQSZVDClvnMZOs+HPXMh/LG2EYeNaBzSHKQrrVh74tVuJxSlaT0EkelPT42VpbqedDY8Zb1vqaYnQWSu507gVETk8setEVjw93AQJzyLOT2DTrelOzrzzAUoobDAevvZjuu/Cn6kviuPBPtK9vp+rsbPfmFpbC7Tze2e7NfftzSA3M6bPLH9VdKHADY47PSe2uXYXM5KnyPDf13AVpJcvzuRunMv6JT5ePDOU2Zbc8ojJrsh1AxjkAZ7CdxIc3XkqN0k3F58uvglK2oLXbkDoFiJrogeMJTnNN/Wjx3e4AVFhEZrch/Kp44dlU5uT7bUWnC6zJodtJ7B4jvsdSCbFfuznzPJ96ZXPMvhMdGeLw0WuQ0Ke7LS01OnytUqq7iNXNfFZ64q0PrsNGY5KbJnnFIo/6SpWeHvCvm74gy0cJvhvy4/5TT86Lm4FCeSbMHz56zcerFcSeJ5vXZk6euVFrbvQdleYNULBuJgBKi39fPmSWmX2g1onFrmvEyLn6YzQqvWu7dVb1V4cWb9l4rSJnCy200EIL/w/8B+C4oB82J5LtAAAAAElFTkSuQmCC" alt="El Corral"><div class="lt-name">El Corral</div></div>
+        <div class="logo-tile"><img src="data:image/png;base64,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" alt="Marisa Pastelerías"><div class="lt-name">Marisa Pastelerías</div></div>
+        <div class="logo-tile"><div class="wordmark">Coopidrogas</div><div class="lt-name">10,159 droguerías</div></div>
+        <div class="logo-tile"><div class="wordmark">Tacos Keyon</div><div class="lt-name">Monterrey, MX</div></div>
+        <div class="logo-tile"><div class="wordmark">Casa de los Abuelos</div><div class="lt-name">Piloto Picker</div></div>
+      </div>
     </div>
   </section>
 
@@ -272,29 +310,49 @@ h2.slidehead b{color:var(--rose);}
       <h2 class="slidehead">El mismo problema, resuelto con <b>Pizza Hut Colombia.</b></h2>
       <div class="case-head">
         <div class="emoji">🍕</div>
-        <div><div class="cn">Cerrado directo con el Director Nacional de Operaciones</div><div class="cs">SIN PROCESO PARA CUENTAS GRANDES — EL MISMO PUNTO DONDE ESTÁ ODEN HOY</div></div>
+        <div><div class="cn">Cerrado directo con el Director Nacional de Operaciones</div><div class="cs">SIN PROCESO PARA CUENTAS GRANDES · EL MISMO PUNTO DONDE ESTÁ ODEN HOY</div></div>
       </div>
       <div class="case-nums">
         <div class="case-num"><div class="cl">Tamaño de la cuenta</div><div class="cv">27 locales</div></div>
-        <div class="case-num"><div class="cl">Estructura</div><div class="cv">Fee + orquestación</div></div>
-        <div class="case-num"><div class="cl">Ciclo real</div><div class="cv">2–6 meses</div></div>
+        <div class="case-num"><div class="cl">Estructura</div><div class="cv">Fee fijo + por entrega</div></div>
+        <div class="case-num"><div class="cl">Tiempo a firma</div><div class="cv">3 meses</div></div>
       </div>
-      <div class="case-narrative">La integración con su ERP falló en varios módulos durante la implementación y el cliente dudó en continuar. Moví a los equipos de producto y tech directamente para construir una solución a la medida. <b>Resultado: operación estable, costos mejorados, y conversaciones abiertas de expansión a México</b> — por recomendación del propio cliente.</div>
-    </div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-inner">
-
-      <span class="tag rose">El efecto que no esperas</span>
-      <h2 class="slidehead">Cada cuenta grande cerrada <b>hace más fácil cerrar la siguiente.</b></h2>
-      <div class="snow-row">
-        <div style="flex:1;">
-          <div class="ref-row-sm"><div class="emoji">🍣</div><div><div class="rn">Niu Sushi — 50+ locales</div><div class="rl">Venta directa al founder de una de las cadenas de sushi más grandes de LATAM — MBA, ex-consultoría estratégica. Mismo tipo de decisor al que Oden necesita llegar.</div></div></div>
-        </div>
-        <div class="snow-right">
-          <div class="sh">La idea central</div>
-          <div class="st">Pizza Hut Colombia se volvió el caso que abrió la conversación de expansión a México. Tu primera cuenta grande en Oden no son solo $143,760 MXN al año — es el caso de éxito que cierra la segunda, la tercera, la décima.</div>
+      <div class="timeline" style="margin-top:22px;">
+        <div class="tl-line"></div>
+        <div class="tl-nodes">
+          <div class="tl-node">
+            <div class="tl-dot">🎯</div>
+            <div class="tl-h">Meses 1–3: Prospección a firma</div>
+            <ul>
+              <li>Contacto directo con el Director Nacional de Operaciones</li>
+              <li>Demos + negociación hasta cerrar <b>27 locales</b></li>
+            </ul>
+          </div>
+          <div class="tl-node">
+            <div class="tl-dot">🚀</div>
+            <div class="tl-h">Mes 4: Arranque</div>
+            <ul>
+              <li><b>$50 USD/local/mes</b> + <b>$3.25 USD/entrega</b></li>
+              <li>Arranca en 1,200 entregas/mes → <span class="money">$5,250 USD/mes</span> (~$63K/año)</li>
+              <li>El ERP falló a mitad de implementación — resolví con producto y tech, sin perder la cuenta</li>
+            </ul>
+          </div>
+          <div class="tl-node">
+            <div class="tl-dot">📈</div>
+            <div class="tl-h">Meses siguientes: Escalado</div>
+            <ul>
+              <li>Volumen sube a 6,000 entregas/mes → <span class="money">$20,850 USD/mes</span> (~$250K/año)</li>
+              <li>Mismo contrato, mismo fee fijo — solo crece el uso</li>
+            </ul>
+          </div>
+          <div class="tl-node">
+            <div class="tl-dot">🌎</div>
+            <div class="tl-h">Hoy</div>
+            <ul>
+              <li>La cuenta abre la conversación de <b>expansión a Pizza Hut México</b></li>
+              <li>No es un caso aislado: mismo patrón cerró <b>Niu Sushi</b>, 50+ locales, directo con el founder</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -310,20 +368,25 @@ h2.slidehead b{color:var(--rose);}
         <div class="tl-nodes">
           <div class="tl-node">
             <div class="tl-dot">🔍</div>
-            <div class="tl-h">Mes 1: Diagnóstico + ICP</div>
+            <div class="tl-h">Mes 1: Diagnóstico y fundamentos</div>
             <ul>
-              <li>Sesión a fondo para conocer tu operación y tus clientes actuales</li>
-              <li>Definimos juntos el <b>perfil de cuenta grande ideal</b></li>
-              <li>Mapeo de objetivos + primer contacto con las cuentas prioritarias</li>
+              <li><b>Sesión de diagnóstico a fondo</b>: entiendo tu operación real antes de prescribir nada</li>
+              <li><b>ICP de cuenta grande</b>, definido contigo: dejas de prospectar a ciegas</li>
+              <li><b>Mapeo del proceso comercial end to end</b>, de prospección a firma, adaptado a tu ciclo</li>
+              <li><b>Funnel + KPIs por etapa</b>: puedes medir avance, no solo sentir que va bien</li>
+              <li><b>Primeras cuentas mapeadas</b> + mensaje de prospección personalizado para cada una</li>
             </ul>
           </div>
           <div class="tl-node">
             <div class="tl-dot">📋</div>
-            <div class="tl-h">Mes 2: Proceso + acompañamiento</div>
+            <div class="tl-h">Mes 2: Proceso ejecutable y transferencia</div>
             <ul>
-              <li>Proceso de venta <b>documentado paso a paso</b>, listo para tu equipo</li>
-              <li><b>Templates:</b> impacto por cuenta + propuesta formal</li>
-              <li>Pricing para cuentas grandes + entrenamiento semanal mientras arrancan</li>
+              <li><b>Preguntas de perfilamiento vs. ICP</b>: cada demo filtra fit real, no genérico</li>
+              <li><b>Estructura de demo documentada</b>: la corres sola, sabiendo qué decir</li>
+              <li><b>Template de pre-propuesta</b> con números reales, antes de la propuesta formal</li>
+              <li><b>Template de propuesta comercial</b>: la misma estructura que cerró Pizza Hut y Niu Sushi</li>
+              <li><b>Pricing para cuentas grandes</b>, en MXN: dejas de improvisar descuentos</li>
+              <li><b>Entrenamiento final</b>: operas el proceso tú, sin depender de mí</li>
             </ul>
           </div>
         </div>
@@ -339,7 +402,6 @@ h2.slidehead b{color:var(--rose);}
       <h2 class="slidehead">Las dudas antes de decidir.</h2>
       <div class="faq-list">
         <div class="faq-row"><div class="faq-q"><span class="qm">?</span>¿Por qué no lo hacemos nosotros mismos?</div><div class="faq-a">Podrían — pero tomaría meses aprender por prueba y error lo que yo ya sé hacer. Mientras tanto, cada mes sin proceso es una cuenta grande que nadie contactó.</div></div>
-        <div class="faq-row"><div class="faq-q"><span class="qm">?</span>¿Por qué no contratar a alguien de tiempo completo?</div><div class="faq-a">Es la opción cara y lenta: salario + reclutamiento + onboarding, para un resultado que no está garantizado. Este proyecto les deja el proceso probado — deciden después si quieren a alguien de planta para ejecutarlo.</div></div>
         <div class="faq-row"><div class="faq-q"><span class="qm">?</span>¿Qué pasa si en 2 meses no hay una cuenta cerrada?</div><div class="faq-a">Es realista: cerrar una cuenta grande toma 2 a 6 meses, más que este proyecto. Lo que sí tienes garantizado al final: el ICP, el proceso documentado, los templates, y las primeras conversaciones ya arrancadas.</div></div>
       </div>
     </div>
@@ -355,6 +417,7 @@ h2.slidehead b{color:var(--rose);}
         <div class="pl-row"><div class="pi">💬</div><div class="pt">Una sesión a fondo contigo para entender tu operación, tus clientes actuales y lo que ya han intentado.</div></div>
         <div class="pl-row"><div class="pi">🚪</div><div class="pt">Cualquier cuenta grande que ya haya tocado su puerta antes, aunque no haya avanzado.</div></div>
         <div class="pl-row"><div class="pi">⏱️</div><div class="pt">Tiempo real que puedas dedicarle cada semana, para planear las sesiones a tu ritmo real.</div></div>
+        <div class="pl-row"><div class="pi">🗂️</div><div class="pt">Qué usan hoy para dar seguimiento a leads, aunque sea un Excel o nada. Si no tienen CRM, lo puedo construir yo mismo como parte del proyecto — ya armé uno en producción para una cartera de $213M.</div></div>
       </div>
     </div>
   </section>
@@ -370,12 +433,13 @@ h2.slidehead b{color:var(--rose);}
           <div class="inv-row"><div class="il"><b>Diagnóstico + ICP</b>Sesión a fondo, mapeo de cuentas</div><div class="iv">Mes 1</div></div>
           <div class="inv-row"><div class="il"><b>Proceso + templates</b>Documentado, listo para tu equipo</div><div class="iv">Mes 2</div></div>
           <div class="inv-row"><div class="il"><b>Acompañamiento</b>Sesión semanal + WhatsApp abierto</div><div class="iv">Incluido</div></div>
-          <div class="inv-row"><div class="il"><b>Total — 2 meses</b>Pago 50% inicio / 50% entrega</div><div class="iv">$2,000 USD</div></div>
+          <div class="inv-row"><div class="il"><b>Bonus: apertura de conversación</b>1-2 cuentas de mi red personal, sin garantía de cierre</div><div class="iv">Incluido</div></div>
+          <div class="inv-row"><div class="il"><b>Total · 2 meses</b>Pago 50% inicio / 50% entrega</div><div class="iv">$2,000 USD</div></div>
         </div>
         <div class="roi-card">
-          <div class="rh">Retorno — una sola cuenta grande cerrada</div>
+          <div class="rh">Retorno de una sola cuenta grande cerrada</div>
           <div class="rn">~3.8x</div>
-          <div class="rd">en el primer año, de UNA sola cuenta de 20 locales en Pro</div>
+          <div class="rd">$2,000 USD (~$38,000 MXN) invertidos → $143,760 MXN/año de UNA sola cuenta de 20 locales en Pro</div>
           <div class="roi-split">
             <div><div class="rp">~3 meses</div><div class="rl">para recuperar la inversión completa</div></div>
             <div><div class="rp">$143,760</div><div class="rl">MXN/año, recurrente después</div></div>
